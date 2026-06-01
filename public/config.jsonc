@@ -5,14 +5,16 @@
 			{
 				"name": "Group edges",
 				"size": 4,
-				"start_position": [
-					//
-					" #### ",
-					"######",
-					"wb##bw",
-					"######",
-					"######",
-					" #### "
+				"start_positions": [
+					[
+						//
+						" #### ",
+						"######",
+						"wb##bw",
+						"######",
+						"######",
+						" #### "
+					]
 				],
 				"arrows": [{ "from": [3, 1], "to": [0, 2], "both_ways": true }],
 				"notation": "Uw' R F' U R' F Uw"
@@ -25,14 +27,25 @@
 			{
 				"name": "Yellow cross parity",
 				"size": 4,
-				"start_position": [
-					//
-					" #### ",
-					"######",
-					"##yyy#",
-					"##yyy#",
-					"######",
-					" #### "
+				"start_positions": [
+					[
+						//
+						" #### ",
+						"######",
+						"##yyy#",
+						"##yyy#",
+						"######",
+						" #### "
+					],
+					[
+						//
+						" #### ",
+						"##yy##",
+						"#yyyy#",
+						"#yyyy#",
+						"######",
+						" #### "
+					]
 				],
 				"arrows": [],
 				"notation": "r2 B2 U2 l U2 r' U2 r U2 F2 r F2 l' B2 r2"
@@ -40,14 +53,25 @@
 			{
 				"name": "Egde parity",
 				"size": 4,
-				"start_position": [
-					//
-					" bbbb ",
-					"ryyyyo",
-					"ryyyyg",
-					"ryyyyg",
-					"ryyyyo",
-					" goog "
+				"start_positions": [
+					[
+						//
+						" bbbb ",
+						"ryyyyo",
+						"ryyyyg",
+						"ryyyyg",
+						"ryyyyo",
+						" goog "
+					],
+					[
+						//
+						" bggb ",
+						"ryyyyo",
+						"ryyyyo",
+						"ryyyyo",
+						"ryyyyo",
+						" gbbg "
+					]
 				],
 				"arrows": [
 					{ "from": [1, 0], "to": [1, 3], "both_ways": true },
@@ -58,11 +82,277 @@
 		]
 	},
 	{
-		"title": "OLL",
-		"items": []
+		"title": "Yellow cross",
+		"items": [
+			{
+				"name": "I Shape",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" #y# ",
+						"#####",
+						"#yyy#",
+						"#####",
+						" #y# "
+					]
+				],
+				"arrows": [],
+				"notation": "F R U R' U' F'"
+			},
+			{
+				"name": "L Shape",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" #y# ",
+						"#####",
+						"y#yy#",
+						"##y##",
+						" ### "
+					]
+				],
+				"arrows": [],
+				"notation": "F R U R' U' R U R' U' F'"
+			}
+		]
 	},
 	{
-		"title": "PLL",
-		"items": []
+		"title": "OLL",
+		"items": [
+			{
+				"name": "Sune",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" y## ",
+						"##y#y",
+						"#yyy#",
+						"#yy##",
+						" ##y "
+					]
+				],
+				"arrows": [],
+				"notation": "R U R' U R U2 R'"
+			},
+			{
+				"name": "Anti-Sune",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" ### ",
+						"y#yy#",
+						"#yyy#",
+						"##y#y",
+						" y## "
+					]
+				],
+				"arrows": [],
+				"notation": "R U2 R' U' R U' R'"
+			},
+			{
+				"name": "H",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" ### ",
+						"y#y#y",
+						"#yyy#",
+						"y#y#y",
+						" ### "
+					]
+				],
+				"arrows": [],
+				"notation": "R U R' U R U' R' U R U2 R'"
+			},
+			{
+				"name": "L",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" ### ",
+						"#yy#y",
+						"#yyy#",
+						"##yy#",
+						" y## "
+					]
+				],
+				"arrows": [],
+				"notation": "F R' F' r U R U' r'"
+			},
+			{
+				"name": "Pi",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" ##y ",
+						"y#y##",
+						"#yyy#",
+						"y#y##",
+						" ##y "
+					]
+				],
+				"arrows": [],
+				"notation": "R U2 R2 U' R2 U' R2 U2 R"
+			},
+			{
+				"name": "T",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" y## ",
+						"##yy#",
+						"#yyy#",
+						"##yy#",
+						" y## "
+					]
+				],
+				"arrows": [],
+				"notation": "r U R' U' r' F R F'"
+			},
+			{
+				"name": "U",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" ### ",
+						"#yyy#",
+						"#yyy#",
+						"##y##",
+						" y#y "
+					]
+				],
+				"arrows": [],
+				"notation": "R2 D R' U2 R D' R' U2 R'"
+			}
+		]
+	},
+	{
+		"title": "PLL corners",
+		"items": [
+			{
+				"name": "Diagonal",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" b#g ",
+						"ryyyr",
+						"#yyy#",
+						"oyyyo",
+						" b#g "
+					]
+				],
+				"arrows": [{ "from": [0, 0], "to": [2, 2], "both_ways": true }],
+				"notation": "F R U' R' U' R U R' F' R U R' U' R' F R F'"
+			},
+			{
+				"name": "Headlights",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" g#r ",
+						"oyyyb",
+						"#yyy#",
+						"oyyyg",
+						" b#r "
+					]
+				],
+				"arrows": [{ "from": [2, 0], "to": [2, 2], "both_ways": true }],
+				"notation": "R U R' U' R' F R2 U' R' U' R U R' F'"
+			}
+		]
+	},
+	{
+		"title": "PLL edges",
+		"items": [
+			{
+				"name": "H",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" gbg ",
+						"oyyyr",
+						"ryyyo",
+						"oyyyr",
+						" bgb "
+					]
+				],
+				"arrows": [
+					{ "from": [1, 0], "to": [1, 2], "both_ways": true },
+					{ "from": [0, 1], "to": [2, 1], "both_ways": true }
+				],
+				"notation": "M2 U M2 U2 M2 U M2"
+			},
+			{
+				"name": "Ua",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" ggg ",
+						"oyyyr",
+						"byyyo",
+						"oyyyr",
+						" brb "
+					]
+				],
+				"arrows": [
+					{ "from": [0, 1], "to": [1, 2], "both_ways": false },
+					{ "from": [1, 2], "to": [2, 1], "both_ways": false },
+					{ "from": [2, 1], "to": [0, 1], "both_ways": false }
+				],
+				"notation": "R U' R U R U R U' R' U' R2"
+			},
+			{
+				"name": "Ub",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" ggg ",
+						"oyyyr",
+						"ryyyb",
+						"oyyyr",
+						" bob "
+					]
+				],
+				"arrows": [
+					{ "from": [1, 2], "to": [0, 1], "both_ways": false },
+					{ "from": [2, 1], "to": [1, 2], "both_ways": false },
+					{ "from": [0, 1], "to": [2, 1], "both_ways": false }
+				],
+				"notation": "R2 U R U R' U' R' U' R' U R'"
+			},
+			{
+				"name": "Z",
+				"size": 3,
+				"start_positions": [
+					[
+						//
+						" rbr ",
+						"gyyyb",
+						"oyyyr",
+						"gyyyb",
+						" ogo "
+					]
+				],
+				"arrows": [
+					{ "from": [1, 0], "to": [2, 1], "both_ways": true },
+					{ "from": [1, 2], "to": [0, 1], "both_ways": true }
+				],
+				"notation": "M' U M2 U M2 U M' U2 M2"
+			}
+		]
 	}
 ]
