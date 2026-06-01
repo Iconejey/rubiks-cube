@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-17.5 -17.5 115 115" width="512" height="512" style="background-color: white;">
+<style>
+:root {
+--b: hsl(240, 100%, 65%);
+--o: hsl(39, 100%, 65%);
+--g: hsl(120, 100%, 65%);
+--r: hsl(0, 100%, 65%);
+--y: hsl(60, 100%, 65%);
+--w: hsl(0, 0%, 100%);
+--gray: hsl(0, 0%, 50%);
+}
+</style>
+<rect x="-17.5" y="-17.5" width="115" height="115" fill="white" />
+<polygon points="14.5,0 31.5,0 30,10 10,10" fill="var(--b)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="31.5,0 48.5,0 50,10 30,10" fill="var(--b)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="48.5,0 65.5,0 70,10 50,10" fill="var(--b)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="0,14.5 10,10 10,30 0,31.5" fill="var(--o)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="10,10 30,10 30,30 10,30" fill="var(--w)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="30,10 50,10 50,30 30,30" fill="var(--w)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="50,10 70,10 70,30 50,30" fill="var(--w)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="70,10 80,14.5 80,31.5 70,30" fill="var(--r)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="0,31.5 10,30 10,50 0,48.5" fill="var(--o)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="10,30 30,30 30,50 10,50" fill="var(--w)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="30,30 50,30 50,50 30,50" fill="var(--w)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="50,30 70,30 70,50 50,50" fill="var(--w)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="70,30 80,31.5 80,48.5 70,50" fill="var(--r)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="0,48.5 10,50 10,70 0,65.5" fill="var(--o)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="10,50 30,50 30,70 10,70" fill="var(--w)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="30,50 50,50 50,70 30,70" fill="var(--w)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="50,50 70,50 70,70 50,70" fill="var(--w)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="70,50 80,48.5 80,65.5 70,70" fill="var(--r)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="10,70 30,70 31.5,80 14.5,80" fill="var(--g)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="30,70 50,70 48.5,80 31.5,80" fill="var(--g)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+<polygon points="50,70 70,70 65.5,80 48.5,80" fill="var(--g)" stroke="black" stroke-width="2" stroke-linejoin="round" />
+</svg>
