@@ -23,7 +23,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 5rem;
-	padding: 4rem 2rem;
+	padding: 4rem 1rem;
 	width: 100%;
 	max-width: 800px;
 
@@ -60,6 +60,16 @@ main {
 			}
 
 			& .move-card {
+				--b: hsl(240, 100%, 70%);
+				--o: hsl(39, 100%, 60%);
+				--g: hsl(120, 100%, 65%);
+				--r: hsl(0, 100%, 65%);
+				--y: hsl(60, 100%, 50%);
+				--p: hsl(290, 100%, 75%);
+				--c: hsl(187, 100%, 65%);
+				--w: hsl(0, 0%, 100%);
+				--gray: hsl(0, 0%, 50%);
+
 				display: inline-flex;
 				flex-direction: column;
 				align-items: center;

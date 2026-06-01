@@ -1,163 +1,163 @@
 {
 	"3": {
 		"R": {
-			"color": "#ff4c4c",
+			"color": "r",
 			"arrows": [{ "from": [2, 2], "to": [2, 0] }]
 		},
 		"L": {
-			"color": "#ff9800",
+			"color": "o",
 			"arrows": [{ "from": [0, 0], "to": [0, 2] }]
 		},
 		"U": {
-			"color": "#ffee58",
+			"color": "y",
 			"arrows": [{ "from": [2, 0], "to": [0, 0] }]
 		},
 		"D": {
-			"color": "#888888",
+			"color": "gray",
 			"arrows": [{ "from": [0, 2], "to": [2, 2] }]
 		},
 		"F": {
-			"color": "#4caf50",
+			"color": "g",
 			"circle": true
 		},
 		"B": {
-			"color": "#2196f3",
+			"color": "b",
 			"circle": true
 		},
-		"M": { "color": "#00bcd4", "arrows": [{ "from": [1, 0], "to": [1, 2] }] },
-		"E": { "color": "#00bcd4", "arrows": [{ "from": [0, 1], "to": [2, 1] }] },
+		"M": { "color": "c", "arrows": [{ "from": [1, 0], "to": [1, 2] }] },
+		"E": { "color": "c", "arrows": [{ "from": [0, 1], "to": [2, 1] }] },
 		"Rw": {
-			"color": "#ff4c4c",
+			"color": "r",
 			"arrows": [
 				{ "from": [2, 2], "to": [2, 0] },
 				{ "from": [1, 2], "to": [1, 0] }
 			]
 		},
 		"r": {
-			"color": "#ff4c4c",
+			"color": "r",
 			"arrows": [
 				{ "from": [2, 2], "to": [2, 0] },
 				{ "from": [1, 2], "to": [1, 0] }
 			]
 		},
 		"Lw": {
-			"color": "#ff9800",
+			"color": "o",
 			"arrows": [
 				{ "from": [0, 0], "to": [0, 2] },
 				{ "from": [1, 0], "to": [1, 2] }
 			]
 		},
 		"l": {
-			"color": "#ff9800",
+			"color": "o",
 			"arrows": [
 				{ "from": [0, 0], "to": [0, 2] },
 				{ "from": [1, 0], "to": [1, 2] }
 			]
 		},
 		"Uw": {
-			"color": "#ffee58",
+			"color": "y",
 			"arrows": [
 				{ "from": [2, 0], "to": [0, 0] },
 				{ "from": [2, 1], "to": [0, 1] }
 			]
 		},
 		"u": {
-			"color": "#ffee58",
+			"color": "y",
 			"arrows": [
 				{ "from": [2, 0], "to": [0, 0] },
 				{ "from": [2, 1], "to": [0, 1] }
 			]
 		},
 		"Dw": {
-			"color": "#e0e0e0",
+			"color": "w",
 			"arrows": [
 				{ "from": [0, 2], "to": [2, 2] },
 				{ "from": [0, 1], "to": [2, 1] }
 			]
 		},
 		"d": {
-			"color": "#e0e0e0",
+			"color": "w",
 			"arrows": [
 				{ "from": [0, 2], "to": [2, 2] },
 				{ "from": [0, 1], "to": [2, 1] }
 			]
 		},
 		"Fw": {
-			"color": "#4caf50",
+			"color": "g",
 			"circle": true
 		},
 		"f": {
-			"color": "#4caf50",
+			"color": "g",
 			"circle": true
 		},
 		"Bw": {
-			"color": "#2196f3",
+			"color": "b",
 			"circle": true
 		},
 		"b": {
-			"color": "#2196f3",
+			"color": "b",
 			"circle": true
 		}
 	},
 	"4": {
-		"R": { "color": "#ff4c4c", "arrows": [{ "from": [3, 3], "to": [3, 0] }] },
-		"L": { "color": "#ff9800", "arrows": [{ "from": [0, 0], "to": [0, 3] }] },
-		"U": { "color": "#ffee58", "arrows": [{ "from": [3, 0], "to": [0, 0] }] },
-		"D": { "color": "#e0e0e0", "arrows": [{ "from": [0, 3], "to": [3, 3] }] },
+		"R": { "color": "r", "arrows": [{ "from": [3, 3], "to": [3, 0] }] },
+		"L": { "color": "o", "arrows": [{ "from": [0, 0], "to": [0, 3] }] },
+		"U": { "color": "y", "arrows": [{ "from": [3, 0], "to": [0, 0] }] },
+		"D": { "color": "w", "arrows": [{ "from": [0, 3], "to": [3, 3] }] },
 		"F": {
-			"color": "#4caf50",
+			"color": "g",
 			"circle": true
 		},
 		"B": {
-			"color": "#2196f3",
+			"color": "b",
 			"circle": true
 		},
-		"r": { "color": "#ff4c4c", "arrows": [{ "from": [2, 3], "to": [2, 0] }] },
-		"l": { "color": "#ff9800", "arrows": [{ "from": [1, 0], "to": [1, 3] }] },
-		"u": { "color": "#ffee58", "arrows": [{ "from": [3, 1], "to": [0, 1] }] },
-		"d": { "color": "#e0e0e0", "arrows": [{ "from": [0, 2], "to": [3, 2] }] },
+		"r": { "color": "r", "arrows": [{ "from": [2, 3], "to": [2, 0] }] },
+		"l": { "color": "o", "arrows": [{ "from": [1, 0], "to": [1, 3] }] },
+		"u": { "color": "y", "arrows": [{ "from": [3, 1], "to": [0, 1] }] },
+		"d": { "color": "w", "arrows": [{ "from": [0, 2], "to": [3, 2] }] },
 		"f": {
-			"color": "#4caf50",
+			"color": "g",
 			"circle": true
 		},
 		"b": {
-			"color": "#2196f3",
+			"color": "b",
 			"circle": true
 		},
 		"Rw": {
-			"color": "#ff4c4c",
+			"color": "r",
 			"arrows": [
 				{ "from": [3, 3], "to": [3, 0] },
 				{ "from": [2, 3], "to": [2, 0] }
 			]
 		},
 		"Lw": {
-			"color": "#ff9800",
+			"color": "o",
 			"arrows": [
 				{ "from": [0, 0], "to": [0, 3] },
 				{ "from": [1, 0], "to": [1, 3] }
 			]
 		},
 		"Uw": {
-			"color": "#ffee58",
+			"color": "y",
 			"arrows": [
 				{ "from": [3, 0], "to": [0, 0] },
 				{ "from": [3, 1], "to": [0, 1] }
 			]
 		},
 		"Dw": {
-			"color": "#e0e0e0",
+			"color": "w",
 			"arrows": [
 				{ "from": [0, 3], "to": [3, 3] },
 				{ "from": [0, 2], "to": [3, 2] }
 			]
 		},
 		"Fw": {
-			"color": "#4caf50",
+			"color": "g",
 			"circle": true
 		},
 		"Bw": {
-			"color": "#2196f3",
+			"color": "b",
 			"circle": true
 		}
 	}

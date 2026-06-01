@@ -169,7 +169,7 @@ function generate_move_card(size, move_str, moves_config) {
 	const data = generate_move_svg(size, move_str, moves_config);
 	if (!data) return `<span class="move-card unknown">${move_str}</span>`;
 
-	return `<div class="move-card" style="background-color: ${data.color}99;">
+	return `<div class="move-card" style="background-color: color-mix(in srgb, var(--${data.color}) 50%, transparent);">
 			${data.html}
 			<div class="move-label">${move_str}</div>
 		</div>`;
@@ -183,7 +183,7 @@ function generate_sequence_card(size, moves, moves_config) {
 			svgs_html += data.html;
 		}
 	}
-	return `<div class="move-card sequence-card" style="background-color: #ce93d899;">
+	return `<div class="move-card sequence-card" style="background-color: color-mix(in srgb, var(--p) 60%, transparent);">
 			<div style="display: flex; gap: 8px;">${svgs_html}</div>
 			<div class="move-label">${moves.join(' ')}</div>
 		</div>`;
