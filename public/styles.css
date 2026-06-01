@@ -5,13 +5,13 @@
 }
 
 body {
-	--b: blue;
-	--o: orange;
-	--g: green;
-	--r: red;
-	--y: yellow;
-	--w: white;
-	--gray: gray;
+	--b: hsl(240, 100%, 65%);
+	--o: hsl(39, 100%, 65%);
+	--g: hsl(120, 100%, 65%);
+	--r: hsl(0, 100%, 65%);
+	--y: hsl(60, 100%, 65%);
+	--w: hsl(0, 0%, 100%);
+	--gray: hsl(0, 0%, 50%);
 
 	display: flex;
 	align-items: center;

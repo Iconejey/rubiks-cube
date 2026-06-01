@@ -14,10 +14,7 @@
 					"######",
 					" #### "
 				],
-				"arrows": [
-					{ "from": [0, 1], "to": [3, 2], "both_ways": false },
-					{ "from": [3, 1], "to": [0, 2], "both_ways": false }
-				],
+				"arrows": [{ "from": [3, 1], "to": [0, 2], "both_ways": true }],
 				"notation": "Uw' R F' U R' F Uw"
 			}
 		]
