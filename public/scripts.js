@@ -91,12 +91,17 @@ function generate_move_svg(size, move_str, moves_config) {
 		return null;
 	}
 
-	const cell_size = 15;
+	const cell_size = 10;
 	const svg_size = size * cell_size;
+
+	let draw_inverted = inverted;
+	if (base_move.startsWith('B') || base_move.startsWith('b')) {
+		draw_inverted = !draw_inverted;
+	}
 
 	let svg_transform = '';
 	if (move_def.circle) {
-		svg_transform = inverted ? 'transform: rotate(-10deg);' : 'transform: rotate(10deg);';
+		svg_transform = draw_inverted ? 'transform: rotate(-10deg);' : 'transform: rotate(10deg);';
 	}
 
 	const padded_size = svg_size + 2;
@@ -125,7 +130,7 @@ function generate_move_svg(size, move_str, moves_config) {
 		const startX = cx;
 		const startY = cy - r;
 
-		if (inverted) {
+		if (draw_inverted) {
 			// Counter-clockwise 3/4 turn ends at Right
 			const endX = cx + r;
 			const endY = cy;

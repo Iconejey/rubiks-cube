@@ -23,7 +23,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 5rem;
-	padding: 2rem;
+	padding: 4rem 2rem;
 	width: 100%;
 	max-width: 800px;
 
@@ -63,13 +63,13 @@ main {
 				display: inline-flex;
 				flex-direction: column;
 				align-items: center;
-				padding: 10px;
+				padding: 5px;
 				border-radius: 6px;
 				color: black;
-				font-size: 1.2rem;
+				font-size: 0.9rem;
 				font-family: monospace;
 				font-weight: bold;
-				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+				border: 1px solid #00000022;
 			}
 
 			& .move-card.unknown {
