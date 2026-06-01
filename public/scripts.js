@@ -73,7 +73,7 @@ function html(strings, ...values) {
 	}, '');
 }
 
-function generate_move_card(size, move_str, moves_config) {
+function generate_move_svg(size, move_str, moves_config) {
 	let inverted = false;
 	let base_move = move_str;
 	if (base_move.endsWith("'")) {
@@ -88,7 +88,7 @@ function generate_move_card(size, move_str, moves_config) {
 
 	const move_def = moves_config[size] && moves_config[size][base_move];
 	if (!move_def) {
-		return `<span class="move-card unknown">${move_str}</span>`;
+		return null;
 	}
 
 	const cell_size = 15;
@@ -157,9 +157,30 @@ function generate_move_card(size, move_str, moves_config) {
 	}
 	svg_html += `</svg>`;
 
-	return `<div class="move-card" style="background-color: ${move_def.color}99;">
-			${svg_html}
+	return { html: svg_html, color: move_def.color };
+}
+
+function generate_move_card(size, move_str, moves_config) {
+	const data = generate_move_svg(size, move_str, moves_config);
+	if (!data) return `<span class="move-card unknown">${move_str}</span>`;
+
+	return `<div class="move-card" style="background-color: ${data.color}99;">
+			${data.html}
 			<div class="move-label">${move_str}</div>
+		</div>`;
+}
+
+function generate_sequence_card(size, moves, moves_config) {
+	let svgs_html = '';
+	for (const move_str of moves) {
+		const data = generate_move_svg(size, move_str, moves_config);
+		if (data) {
+			svgs_html += data.html;
+		}
+	}
+	return `<div class="move-card sequence-card" style="background-color: #ce93d899;">
+			<div style="display: flex; gap: 8px;">${svgs_html}</div>
+			<div class="move-label">${moves.join(' ')}</div>
 		</div>`;
 }
 
@@ -207,15 +228,21 @@ async function main() {
 					}
 				}
 
+				const moves = item.notation.split(' ');
+				const notation_html_parts = [];
+				for (let i = 0; i < moves.length; i++) {
+					if (moves[i] === 'R' && moves[i + 1] === 'U' && moves[i + 2] === "R'" && moves[i + 3] === "U'") {
+						notation_html_parts.push(generate_sequence_card(item.size, ['R', 'U', "R'", "U'"], moves_config));
+						i += 3;
+					} else {
+						notation_html_parts.push(generate_move_card(item.size, moves[i], moves_config));
+					}
+				}
+
 				item_div.innerHTML = html`
 					<h2>${item.name}</h2>
 					<div class="start-positions">${svg_html}</div>
-					<div class="notation">
-						${item.notation
-							.split(' ')
-							.map(move => generate_move_card(item.size, move, moves_config))
-							.join('')}
-					</div>
+					<div class="notation">${notation_html_parts.join('')}</div>
 				`;
 
 				section_div.appendChild(item_div);
