@@ -15,8 +15,6 @@ body {
 
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	height: 100vh;
 	font-family: Arial, sans-serif;
 	background-color: #f0f0f0;
 }
@@ -24,10 +22,35 @@ body {
 main {
 	display: flex;
 	flex-direction: column;
-	gap: 3rem;
-	margin: 2rem;
+	gap: 5rem;
+	padding: 2rem;
+	width: 100%;
+	max-width: 800px;
 
-	& h1 {
-		margin-bottom: 1rem;
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+
+		& h1 {
+			/* border-bottom: 4px solid black; */
+		}
+
+		& .item {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			padding-left: 1rem;
+			border-left: 4px solid #00000022;
+
+			& h2 {
+				opacity: 0.8;
+			}
+
+			& .start-positions {
+				display: flex;
+				gap: 1rem;
+			}
+		}
 	}
 }

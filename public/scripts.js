@@ -66,6 +66,13 @@ function generate_cube_svg(size, position, arrows = null) {
 	return svg_html;
 }
 
+function html(strings, ...values) {
+	return strings.reduce((result, string, i) => {
+		const value = values[i] !== undefined ? values[i] : '';
+		return result + string + value;
+	}, '');
+}
+
 async function main() {
 	const response = await fetch('config.jsonc');
 	const text = await response.text();
@@ -101,6 +108,7 @@ async function main() {
 		if (section.items && section.items.length > 0) {
 			for (const item of section.items) {
 				const item_div = document.createElement('div');
+				item_div.classList.add('item');
 
 				let svg_html = '';
 				if (item.start_positions && item.size) {
@@ -109,7 +117,12 @@ async function main() {
 					}
 				}
 
-				item_div.innerHTML = `${svg_html}<strong>${item.name}</strong>: <code>${item.notation}</code>`;
+				item_div.innerHTML = html`
+					<h2>${item.name}</h2>
+					<div class="start-positions">${svg_html}</div>
+					<span>${item.notation}</span>
+				`;
+
 				section_div.appendChild(item_div);
 			}
 		}
