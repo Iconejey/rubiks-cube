@@ -14,15 +14,6 @@
 					"######",
 					" #### "
 				],
-				"end_position": [
-					//
-					" #### ",
-					"######",
-					"#b####",
-					"#b####",
-					"######",
-					" #### "
-				],
 				"arrows": [
 					{ "from": [0, 1], "to": [3, 2], "both_ways": false },
 					{ "from": [3, 1], "to": [0, 2], "both_ways": false }
@@ -46,15 +37,6 @@
 					"######",
 					" #### "
 				],
-				"end_position": [
-					//
-					" #### ",
-					"######",
-					"##yyy#",
-					"##yyy#",
-					"##yy##",
-					" #### "
-				],
 				"arrows": [],
 				"notation": "r2 B2 U2 l U2 r' U2 r U2 F2 r F2 l' B2 r2"
 			},
@@ -69,15 +51,6 @@
 					"ryyyyg",
 					"ryyyyo",
 					" goog "
-				],
-				"end_position": [
-					//
-					" boob ",
-					"ryyyyo",
-					"ryyyyg",
-					"ryyyyg",
-					"ryyyyo",
-					" gbbg "
 				],
 				"arrows": [
 					{ "from": [1, 0], "to": [1, 3], "both_ways": true },
