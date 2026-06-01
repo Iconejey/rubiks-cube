@@ -21,7 +21,7 @@ function generate_cube_svg(size, position, arrows = null) {
 	};
 
 	const padded_size = svg_size + 2;
-	let svg_html = `<svg viewBox="-1 -1 ${padded_size} ${padded_size}" width="${padded_size}" height="${padded_size}" style="display: block; margin-bottom: 8px;">`;
+	let svg_html = `<svg viewBox="-1 -1 ${padded_size} ${padded_size}" width="${padded_size}" height="${padded_size}" style="display: inline-block; margin-right: 8px; margin-bottom: 8px;">`;
 
 	svg_html += `
 		<defs>
@@ -103,72 +103,10 @@ async function main() {
 				const item_div = document.createElement('div');
 
 				let svg_html = '';
-				if (item.start_position && item.size) {
-					const size = item.size;
-					const cell_size = 20;
-					const outer_width = cell_size / 2;
-					const svg_size = size * cell_size + 2 * outer_width;
-
-					const get_vertex = (c, r) => {
-						let x = c === 0 ? 0 : c === size + 2 ? svg_size : outer_width + (c - 1) * cell_size;
-						let y = r === 0 ? 0 : r === size + 2 ? svg_size : outer_width + (r - 1) * cell_size;
-
-						const cx = svg_size / 2;
-						const cy = svg_size / 2;
-						const squeeze = 0.15;
-
-						if (r === 0 || r === size + 2) {
-							x += (cx - x) * squeeze;
-						}
-						if (c === 0 || c === size + 2) {
-							y += (cy - y) * squeeze;
-						}
-						return `${x},${y}`;
-					};
-
-					const padded_size = svg_size + 2;
-					svg_html = `<svg viewBox="-1 -1 ${padded_size} ${padded_size}" width="${padded_size}" height="${padded_size}" style="display: block; margin-bottom: 8px;">`;
-
-					svg_html += `
-						<defs>
-							<marker id="arrowhead" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">
-								<polygon points="0,0 4,2 0,4" fill="black" />
-							</marker>
-							<marker id="arrowhead_start" markerWidth="4" markerHeight="4" refX="1" refY="2" orient="auto">
-								<polygon points="4,0 0,2 4,4" fill="black" />
-							</marker>
-						</defs>
-					`;
-
-					item.start_position.forEach((row, ri) => {
-						for (let ci = 0; ci < row.length; ci++) {
-							const char = row[ci];
-							if (char !== ' ') {
-								const color = char === '#' ? 'var(--gray)' : `var(--${char})`;
-								const p1 = get_vertex(ci, ri);
-								const p2 = get_vertex(ci + 1, ri);
-								const p3 = get_vertex(ci + 1, ri + 1);
-								const p4 = get_vertex(ci, ri + 1);
-								svg_html += `<polygon points="${p1} ${p2} ${p3} ${p4}" fill="${color}" stroke="black" stroke-width="2" stroke-linejoin="round" />`;
-							}
-						}
-					});
-
-					if (item.arrows) {
-						item.arrows.forEach(arrow => {
-							const x1 = outer_width + arrow.from[0] * cell_size + cell_size / 2;
-							const y1 = outer_width + arrow.from[1] * cell_size + cell_size / 2;
-							const x2 = outer_width + arrow.to[0] * cell_size + cell_size / 2;
-							const y2 = outer_width + arrow.to[1] * cell_size + cell_size / 2;
-
-							const marker_start = arrow.both_ways ? 'marker-start="url(#arrowhead_start)"' : '';
-							const marker_end = 'marker-end="url(#arrowhead)"';
-
-							svg_html += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="black" stroke-width="2" ${marker_start} ${marker_end} />`;
-						});
+				if (item.start_positions && item.size) {
+					for (const position of item.start_positions) {
+						svg_html += generate_cube_svg(item.size, position, item.arrows);
 					}
-
-					svg_html += `</svg>`;
 				}
 
 				item_div.innerHTML = `${svg_html}<strong>${item.name}</strong>: <code>${item.notation}</code>`;
