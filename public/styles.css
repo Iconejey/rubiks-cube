@@ -25,16 +25,11 @@ main {
 	gap: 5rem;
 	padding: 4rem 1rem;
 	width: 100%;
-	max-width: 800px;
 
 	section {
 		display: flex;
 		flex-direction: column;
 		gap: 3rem;
-
-		& h1 {
-			/* border-bottom: 4px solid black; */
-		}
 
 		& .item {
 			display: flex;
