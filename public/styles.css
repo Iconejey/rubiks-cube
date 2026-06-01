@@ -51,6 +51,32 @@ main {
 				display: flex;
 				gap: 1rem;
 			}
+
+			& .notation {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				align-items: center;
+			}
+
+			& .move-card {
+				display: inline-flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 10px;
+				border-radius: 6px;
+				color: black;
+				font-size: 1.2rem;
+				font-family: monospace;
+				font-weight: bold;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			& .move-card.unknown {
+				background-color: transparent;
+				box-shadow: none;
+				padding: 0;
+			}
 		}
 	}
 }
