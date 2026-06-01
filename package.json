@@ -7,7 +7,7 @@
 	"main": "server.js",
 	"devDependencies": {},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"prod": "pm2 start server.js --name rubik",
 		"start": "node server.js"
 	},
 	"author": "",
